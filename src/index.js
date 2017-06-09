@@ -1,9 +1,5 @@
-import React, {Component} from 'react'
+export { default as Ocard } from './Ocard';
 
-export default class extends Component {
-  render() {
-    return <div>
-      <h2>Welcome to React components</h2>
-    </div>
-  }
-}
+export { default as OcardCover } from './OcardCover';
+export { default as OcardCards } from './OcardCards';
+export { default as OcardCard } from './OcardCard';

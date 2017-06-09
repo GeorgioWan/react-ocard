@@ -1,0 +1,300 @@
+@mixin cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: .8;
+}
+
+*{
+  font-family: STHeitiTC-Medium;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font: 13px/1.3 "Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+} 
+
+/** iScroll Wrapper **/
+#wrapper{
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/** Ocard **/
+#oacard{
+  width: 820px;
+  
+  @media screen and ( max-width: 970px ){
+    width: 100%;
+    margin-top: 0px;
+    padding: 0;
+  }
+}
+
+/** Cover **/
+#oac-cover{
+  position: relative;  
+  width: 100%;
+  height: 260px;
+  @media screen and ( max-width: 970px ){
+    height: 100vh;
+    position: fixed;
+    overflow: hidden;
+  }
+  
+  .oac-cover-img{
+    @include cover;
+    opacity: 1;
+    background-size: cover;
+    background-position-y: 50%;
+    filter: blur(3px);
+    
+    @media screen and ( max-width: 970px ){
+      filter: blur(0px);
+      background-size: auto 120%;
+      background-position: center center;
+    }
+  }
+  .oac-cover-filter{
+    @include cover;
+    top: 0;
+    background: rgba(0,0,0,.6);
+    
+    @media screen and ( max-width: 970px ){
+      background: rgba(0,0,0,.1);
+    }
+  }
+  .oac-cover-gradient{
+    @include cover;
+    bottom: 0;
+    background: linear-gradient(to bottom,rgba(0,0,0,.7) 25%,rgba(0,0,0,.1) 50%,rgba(64,0,144,.1) 75%,#3baedb 100%);
+    background: -webkit-linear-gradient(to bottom,rgba(0,0,0,.7) 25%,rgba(0,0,0,.1) 50%,rgba(64,0,144,.1) 75%,#3baedb 100%);
+    
+    @media screen and ( max-width: 970px ){
+      background: linear-gradient(to bottom,rgba(0,0,0,.7) 0,rgba(0,0,0,.1) 40%,rgba(0,0,0,.1) 60%,rgba(64,0,144,.1) 80%,#3baedb);
+      background: -webkit-linear-gradient(to bottom,rgba(0,0,0,.7) 0,rgba(0,0,0,.1) 40%,rgba(0,0,0,.1) 60%,rgba(64,0,144,.1) 80%,#3baedb);
+    }
+  }
+  .oac-cover-gradient-left{
+    @include cover;
+    opacity: 1;
+    background: linear-gradient(to right,#30d3b6 0,rgba(48,211,182,0) 50%);
+    background: -webkit-linear-gradient(to right,#30d3b6 0,rgba(48,211,182,0) 50%);
+    
+    @media screen and ( max-width: 970px ){
+      background: linear-gradient(45deg,#4e7d75 0,rgba(48,211,182,0) 45%);
+      background: -webkit-linear-gradient(45deg,#4e7d75 0,rgba(48,211,182,0) 45%);
+    }
+  }
+}
+#oac-card-title-cover{
+  @media screen and ( max-width: 970px ){
+    position: relative;
+    height: 100vh;
+    background: transparent;
+    overflow: hidden;
+  }
+}
+#oac-title{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 190px;
+  color: white;
+  text-align: center;
+  
+  @media screen and ( max-width: 970px ){
+    top: 50%;
+    transform: translateY(-50%);
+    text-shadow: 1px 1px #333;
+    margin-top: -100px;
+  }
+  
+  h1{
+    font-size: 30px;
+    position: relative;
+    margin: 10px 80px;
+    font-weight: bold;
+    
+    @media screen and ( max-width: 970px ){
+      font-weight: 700;
+      margin: 10px 75x;
+    }
+  }
+  p{
+    font-size: 17px;
+    font-family: STHeitiTC-Light;
+    margin: 2px 80px 16px 80px;
+    
+    @media screen and ( max-width: 970px ){
+      font-weight: 700;
+      line-height: 1.4;
+      margin: 20px 75px;
+    }
+  }
+}
+
+/** Card **/
+#oac-cards{
+  background: #F6F6F6;
+  padding-top: 35px;
+  padding-bottom: 10px;
+  
+  @media screen and ( max-width: 970px ){
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .oac-card{
+    position: relative;
+    overflow: hidden;
+    width: 780px;
+    height: 360px;
+    background: #F6F6F6;
+    margin: 0 auto 20px auto;
+    box-shadow: 0px 0px 2px 1px rgba(207,207,207,1);
+    
+    @media screen and ( max-width: 970px ){
+      width: inherit;
+      height: inherit;
+      margin: 0;
+      padding: 10px;
+      box-shadow: none;
+    }
+    
+    .oac-card-table{
+      display: table;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      
+      @media screen and ( max-width: 970px ){
+        height: 95vh;
+      }
+    }
+    .oac-card-table-cell{
+      height: inherit;
+      background: #fff;
+      
+      @media screen and ( max-width: 970px ){
+        display: table-cell;
+      }
+      
+      .oac-card-cover{
+        position: relative;
+        float: left;
+        width: 470px;
+        height: 100%;
+        overflow: hidden;
+        
+        @media screen and ( max-width: 970px ){
+          width: 100%;
+          height: 40vh;
+          float: none;
+        }
+        .oac-card-img{
+          float: left;
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-position: center center;
+          background-position-x: 50%;
+          @media screen and ( max-width: 970px ){
+            float: none;
+          }
+          
+          .oac-card-img-cover{
+            width: 100%;
+            height: 100%;
+            background: #000;
+          }
+        }
+        .oac-card-triangle{
+          position: absolute;
+          right: 0;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 0 365px 31px;
+          border-color: transparent transparent #fff transparent ;
+          
+          @media screen and ( max-width: 970px ){
+            bottom: 0;
+            border-width: 0 0 31px 400px;
+          }
+        }
+      }
+    }
+    .oac-card-table-footer{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      @media screen and ( max-width: 970px ){
+        position: initial;
+        bottom: initial;
+        right: initial;
+        display: table-footer-group;
+      }
+      
+      .oac-card-reference{
+        font-size: 14px;
+        text-align: left;
+        color: #bbb;
+        padding: 0 10px 10px 10px;
+        margin: 0;
+        overflow: hidden;
+      }
+    }
+    .oac-card-info{
+      float: left;
+      width: 250px;
+      height: 100%;
+      background: #fff;
+      margin: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      
+      @media screen and ( max-width: 970px ){
+        width: 80%;
+        height: initial;
+        float: none;
+        margin: auto;
+      }
+      
+      h2{
+        width: 100%;
+        text-align: left;
+        line-height: 1.4;
+        margin: 0;
+        
+        @media screen and ( max-width: 970px ){
+          font-size: 30px;
+        }
+      }
+      p{
+        width: 100%;
+        font-family: STHeitiTC-Light;
+        font-size: 17px;
+        text-align: left;
+        line-height: 1.4;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        //overflow: hidden;
+      }
+    }
+    .clr{
+      @media screen and ( min-width: 970px ){
+        clear: both;
+      }
+    }
+  }
+}
