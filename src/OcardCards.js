@@ -55,11 +55,6 @@ export default class OcardCards extends Component {
             
             // Binding scroll event
             this.myScroll.on( 'scroll', this.handleScroll.bind(this, this.myScroll) );
-            /*
-            setTimeout(() => {
-                this.myScroll.refresh();
-            }, 0);
-            */
         }
     }
     componentWillUnmount(){

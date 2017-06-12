@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { PropTypes as pt } from 'prop-types'
 
 import { OcardCover, OcardCards } from './'
-import './Ocard.scss'
 
 export default class Ocard extends Component {
     static propTypes = {
