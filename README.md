@@ -1,16 +1,18 @@
-# react-ocard
+# React-oCard
+
+The Card style information presentation on mobile devise :iphone:
 
 [![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+[![LICENCE][licence-image]][licence-url]
 
-Describe react-ocard here.
+[build-badge]: https://travis-ci.org/GeorgioWan/react-ocard.svg?branch=master
+[build]: https://travis-ci.org/GeorgioWan/react-ocard
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+[npm-badge]: https://img.shields.io/npm/v/react-ocard.svg
+[npm]: https://www.npmjs.com/package/react-ocard
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
+[licence-image]: https://img.shields.io/npm/l/react-ocard.svg
+[licence-url]: https://github.com/GeorgioWan/react-ocard/blob/master/LICENSE
 
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+under production... :construction:
