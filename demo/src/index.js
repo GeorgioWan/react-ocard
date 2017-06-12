@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {render} from 'react-dom'
 
 import { Ocard } from '../../src'
+import '../../src/Ocard.scss'
 
 const story = {
   cover: {
