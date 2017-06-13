@@ -1,6 +1,6 @@
 {
   "name": "react-ocard",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "react-ocard React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "build": "nwb build-react-component",
-    "clean": "nwb clean-module && nwb clean-demo",
+    "clean": "nwb clean-module && nwb clean-demo && nwb clean-app css",
     "start": "nwb serve-react-demo",
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
