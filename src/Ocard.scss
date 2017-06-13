@@ -5,6 +5,47 @@
   opacity: .8;
 }
 
+// https://gist.github.com/GeorgioWan/fd46d21eb63ebc11cdcac5cf40a60438
+// by OAwan
+// forked from ykhs
+@mixin linear-gradient($angle, $color-stops...) {
+  $_angle-with-vendor-prefix: "";
+  $_angle: "";
+  @if $angle == "to top" or $angle == "bottom" {
+    $_angle-with-vendor-prefix: bottom;
+    $_angle: to top;
+  } @else if $angle == "to right" or $angle == "left" {
+    $_angle-with-vendor-prefix: left;
+    $_angle: to right;
+  } @else if $angle == "to bottom" or $angle == "top" {
+    $_angle-with-vendor-prefix: top;
+    $_angle: to bottom;
+  } @else if $angle == "to left" or $angle == "right" {
+    $_angle-with-vendor-prefix: right;
+    $_angle: to left;
+  } @else if $angle == "to top right" or $angle == "bottom left" {
+    $_angle-with-vendor-prefix: bottom left;
+    $_angle: to top right;
+  } @else if $angle == "to bottom right" or $angle == "top left" {
+    $_angle-with-vendor-prefix: top left;
+    $_angle: to bottom right;
+  } @else if $angle == "to bottom left" or $angle == "top right" {
+    $_angle-with-vendor-prefix: top right;
+    $_angle: to bottom left;
+  } @else if $angle == "to top left" or $angle == "bottom right" {
+    $_angle-with-vendor-prefix: bottom right;
+    $_angle: to top left;
+  } @else {
+    $_angle-with-vendor-prefix: $angle % 360;
+    $_angle: (90 - $angle) % 360;
+  }
+  
+  background: -webkit-linear-gradient($_angle-with-vendor-prefix, $color-stops);  /* For Safari 5.1 to 6.0 */
+  background: -moz-linear-gradient($_angle-with-vendor-prefix, $color-stops);     /* For Firefox 3.6 to 15 */
+  background: -o-linear-gradient($_angle-with-vendor-prefix, $color-stops);       /* For Opera 11.1 to 12.0 */
+  background: linear-gradient($_angle, $color-stops);                             /* Standard syntax */
+}
+
 *{
   font-family: STHeitiTC-Medium;
 }
@@ -76,23 +117,19 @@ body{
   .oac-cover-gradient{
     @include cover;
     bottom: 0;
-    background: linear-gradient(to bottom,rgba(0,0,0,.7) 25%,rgba(0,0,0,.1) 50%,rgba(64,0,144,.1) 75%,#3baedb 100%);
-    background: -webkit-linear-gradient(to bottom,rgba(0,0,0,.7) 25%,rgba(0,0,0,.1) 50%,rgba(64,0,144,.1) 75%,#3baedb 100%);
+    @include linear-gradient(top, rgba(0,0,0,.7) 25%,rgba(0,0,0,.1) 50%,rgba(64,0,144,.1) 75%,#3baedb 100%);
     
     @media screen and ( max-width: 970px ){
-      background: linear-gradient(to bottom,rgba(0,0,0,.7) 0,rgba(0,0,0,.1) 40%,rgba(0,0,0,.1) 60%,rgba(64,0,144,.1) 80%,#3baedb);
-      background: -webkit-linear-gradient(to bottom,rgba(0,0,0,.7) 0,rgba(0,0,0,.1) 40%,rgba(0,0,0,.1) 60%,rgba(64,0,144,.1) 80%,#3baedb);
+      @include linear-gradient(top, rgba(0,0,0,.7) 0,rgba(0,0,0,.1) 40%,rgba(0,0,0,.1) 60%,rgba(64,0,144,.1) 80%,#3baedb);
     }
   }
   .oac-cover-gradient-left{
     @include cover;
     opacity: 1;
-    background: linear-gradient(to right,#30d3b6 0,rgba(48,211,182,0) 50%);
-    background: -webkit-linear-gradient(to right,#30d3b6 0,rgba(48,211,182,0) 50%);
+    @include linear-gradient('to right',#30d3b6 0,rgba(48,211,182,0) 50%);
     
     @media screen and ( max-width: 970px ){
-      background: linear-gradient(45deg,#4e7d75 0,rgba(48,211,182,0) 45%);
-      background: -webkit-linear-gradient(45deg,#4e7d75 0,rgba(48,211,182,0) 45%);
+      @include linear-gradient(45deg,#4e7d75 0,rgba(48,211,182,0) 45%);
     }
   }
 }
@@ -141,6 +178,14 @@ body{
       margin: 20px 75px;
     }
   }
+  .oac-angle-up{
+    font-size: 2em;
+    font-weight: bold;
+    transform: rotate(90deg);
+    &:before{
+      content: '^';
+    }
+  }
 }
 
 /** Card **/
@@ -172,12 +217,13 @@ body{
     }
     
     .oac-card-table{
-      display: table;
+      display: flex;
       width: 100%;
       height: 100%;
       background: #fff;
       
       @media screen and ( max-width: 970px ){
+        display: table;
         height: 95vh;
       }
     }
