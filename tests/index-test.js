@@ -2,7 +2,7 @@ import expect from 'expect'
 import React from 'react'
 import {render, unmountComponentAtNode} from 'react-dom'
 
-import { Ocard, OcardCover, OcardCards, OcardCard } from 'src/'
+import Ocard, { OcardCover, OcardCards, OcardCard } from 'src/'
 
 describe('Ocard', () => {
   let node
