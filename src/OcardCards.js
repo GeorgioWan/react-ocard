@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { PropTypes as pt } from 'prop-types'
 
-import {Icon} from 'react-fa'
 import iScroll from 'iscroll/build/iscroll-probe'
 
 import { OcardCard } from './'
@@ -92,7 +91,7 @@ export default class OcardCards extends Component {
                             <div id="oac-title" style={{ opacity: titleOpacity, transform: `translate3d(0, ${titleScroll}px,0)` }}>
                                 <h1>{ cover.title }</h1>
                                 <p>{ cover.subTitle }</p>
-                                <Icon name="angle-up" size="2x" />
+                                <span className="oac-angle-up"></span>
                             </div>
                         </div>
                         : ''
