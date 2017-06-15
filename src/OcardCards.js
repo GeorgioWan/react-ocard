@@ -40,9 +40,10 @@ export default class OcardCards extends Component {
                 mouseWheel: false,
                 probeType: 3,
                 bounce: true,
+                click:true,
                 
                 // Fix the issue that under Chrome mobile mode can't scroll
-                disablePointer : true,
+                disablePointer:true,
                 disableTouch:false,
                 disableMouse:true
             };
@@ -89,8 +90,10 @@ export default class OcardCards extends Component {
                         window.innerWidth < 970 ?
                         <div id="oac-card-title-cover">
                             <div id="oac-title" style={{ opacity: titleOpacity, transform: `translate3d(0, ${titleScroll}px,0)` }}>
-                                <h1>{ cover.title }</h1>
-                                <p>{ cover.subTitle }</p>
+                                <div className="oac-title" 
+                                     dangerouslySetInnerHTML={{__html: cover.title}}></div>
+                                <div className="oac-title-subtitle" 
+                                     dangerouslySetInnerHTML={{__html: cover.subTitle}}></div>
                                 <span className="oac-angle-up"></span>
                             </div>
                         </div>

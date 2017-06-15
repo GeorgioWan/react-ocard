@@ -37,7 +37,7 @@ export default class OcardCard extends Component {
         let dist = top + scrollY;
         
         // Opacity of the Card's cover filter
-        let opacity = dist / window.innerHeight;
+        let opacity = dist / (window.innerHeight * 0.95);
         opacity = opacity < 1 ? opacity : 1 ;
         
         // Offset when Card's img touch the top of Card (*0.75 make it more smooth)
@@ -72,30 +72,95 @@ export default class OcardCard extends Component {
             );
         }
     }
+    cardGenerator() {
+        const { type, title, content, scrollY } = this.props;
+        const { top } = this.state;
+        
+        // Dist to top of Card's img
+        let dist = top + scrollY;
+        let target = window.innerHeight * 0.95 ;
+        let proportion = dist / target;
+        proportion = proportion <= 0 ? 0 : proportion;
+        
+        // Opacity of the Card's avatar filter
+        let opacity = 1 - proportion;
+        opacity = opacity < 0 ? 0 : opacity ;
+        
+        // Degree of the Card's avatar rotate
+        let deg = 90 *  proportion;
+        
+        let titleOffset = 30 * (1 - opacity * 0.8);
+        titleOffset = titleOffset < 0 ? 0 : titleOffset;
+        
+        let contentOffset = 50 * (1 - opacity * 0.9);
+        contentOffset = contentOffset < 0 ? 0 : contentOffset;
+        
+        if ( window.innerWidth > 971 ){
+            opacity = 1;
+            deg = 0;
+            titleOffset = 0;
+            contentOffset = 0;
+        }
+            
+        if ( type === 'story' || type === 'embed' ){
+            let cardCover = this.cardCoverGenerator();
+            
+            return (
+                <div className="oac-card-table-cell">
+                    { cardCover }
+                    <div className="oac-card-info">
+                        <div className="oac-card-info-title"
+                             dangerouslySetInnerHTML={{__html: title}}></div>
+                        <div className="oac-card-info-content"
+                             dangerouslySetInnerHTML={{__html: content}}></div>
+                    </div>
+                    <div className="clr"></div>
+                </div>
+            );
+        }
+        else if ( type === 'author' ){
+            let { img, avatar } = this.props;
+            return (
+                <div className="oac-card-table-cell">
+                    <div className="oac-card-auth-img" style={{backgroundImage: `url(${img})`}} ref={title}>
+                        <div className="oac-card-auth-container">
+                            <div className="oac-card-auth-avatar" style={{backgroundImage: `url(${avatar})`, transform: `rotate3d(0, 1, 0, ${deg}deg)` ,opacity}}></div>
+                            <div className="oac-card-auth-title" 
+                                 style={{ transform: `translate3d(0, ${titleOffset}px, 0)` , opacity }}
+                                 dangerouslySetInnerHTML={{__html: title}}></div>
+                            <div className="oac-card-auth-content" 
+                               style={{ transform: `translate3d(0, ${contentOffset}px, 0)` , opacity }} 
+                               dangerouslySetInnerHTML={{__html: content}}></div>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+    }
+    refGenerator() {
+        const { reference } = this.props;
+        
+        if ( reference !== '' ){
+            return (
+                <div className="oac-card-table-footer">
+                    <div className="oac-card-reference"
+                         dangerouslySetInnerHTML={{__html: reference}}>
+                    </div>
+                </div>
+            );
+        }
+        
+        return '';
+    }
     render() {
-        const { title, content, reference } = this.props;
-        const cardCover = this.cardCoverGenerator();
+        const card = this.cardGenerator(),
+              reference = this.refGenerator();
         
         return (
             <div className="oac-card">
                 <div className="oac-card-table">
-                    <div className="oac-card-table-cell">
-                        { cardCover }
-                        <div className="oac-card-info">
-                            <h2>{ title }</h2>
-                            <p>{ content }</p>
-                        </div>
-                        <div className="clr"></div>
-                    </div>
-                    {
-                    reference != '' ?
-                    <div className="oac-card-table-footer">
-                        <div className="oac-card-reference">
-                        { reference }
-                        </div>
-                    </div>
-                    : ''
-                    }
+                    { card }
+                    { reference }
                 </div>
             </div>
         );
