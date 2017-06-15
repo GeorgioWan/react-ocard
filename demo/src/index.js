@@ -6,54 +6,67 @@ import '../../src/Ocard.scss'
 
 const story = {
   cover: {
-    img: 'https://oawan.me/2017/%E5%8F%B0%E5%8D%97%E4%B8%AD%E8%A5%BF%E5%8D%80-%E9%AC%8D%E9%AC%9A%E5%BF%A0%E7%89%9B%E8%82%89%E6%B9%AF-%E4%B8%8D%E5%8F%AF%E9%8C%AF%E9%81%8E%E7%9A%84%E9%A0%82%E7%B4%9A%E7%89%9B%E8%82%89%E6%B9%AF/img/%E9%AC%8D%E9%AC%9A%E5%BF%A0%E7%89%9B%E8%82%89%E6%B9%AF-1.jpg',
-    title: '台南吃什麼？讓我們一起相機先食吧！',
-    subTitle: '我是 OAwan，在《新樂街口的三角窗》寫著我吃過拍過的美食。因為喜歡吃，所以四處走訪，因為喜歡紀錄，所以練成相機先食；讓我用簡單的方式，分享給你我台南的美食地圖吧！'
+    img: 'http://www.qerja.com/journal/wp-content/uploads/CODING.jpg',
+    title: '<a href="https://github.com/GeorgioWan/react-ocard" target="_blank">React-oCard</a>',
+    subTitle: 'This component is inspired by Yahoo youcard(懶人卡), created with nwb toolkit, use ReactJS, iScroll, ES6(Babel), SCSS and Mocha etc.<br/>Let\'s scroll to start the demo!'
   },
   cards: [
     {
       type: 'story',
-      img: 'https://oawan.me/2017/%E5%8F%B0%E5%8D%97%E4%B8%AD%E8%A5%BF%E5%8D%80-%E9%98%BF%E6%B1%9F%E7%82%92%E9%B1%94%E9%AD%9A-%E9%80%99%E6%89%8D%E6%98%AF%E6%AD%A3%E6%B8%AF%E7%9A%84%E7%82%92%E9%B1%94%E9%AD%9A%E6%84%8F%E9%BA%B5/img/%E9%98%BF%E6%B1%9F%E7%82%92%E9%B1%94%E9%AD%9A-4.jpg',
-      title: '阿江炒鱔魚',
-      content: '來台南不可不吃的美食，除了牛肉湯、虱目魚和蝦捲外，千萬別忘了嘗試好吃的炒鱔魚意麵！阿江的鱔魚炒得爽脆不老爛，意麵吸飽微甜偏鹹的湯汁，「這才是正港的炒鱔魚意麵！」',
-      reference: '新樂街口的三角窗 - oawan.me'
+      img: 'http://imgur.com/CaBRleb.jpg',
+      title: 'nwm',
+      content: 'nwb is a toolkit for React, Preact & Inferno apps, React libraries and other npm modules for the web, with no configuration (until you need it).',
+      reference: 'photo by <a href="https://github.com/GeorgioWan" target="_blank">OAwan</a>'
     },{
       type: 'story',
-      img: 'https://oawan.me/img/food/2017/Tainan/West%20Central%20District/%E5%AF%8C%E7%9B%9B%E8%99%9F%E7%A2%97%E7%B2%BF/%E7%A2%97%E7%B2%BF-3.jpg',
-      title: '富盛號碗粿',
-      content: '喜歡古早味嗎？用幾個小銅板來永康市場滿足你對古早味的口腹之慾！富盛號的碗粿用料實在，有蝦仁、肉燥、香菇和一顆好吃的蛋黃，加上碗粿本身又香又Q嫩，而且只要 30 元呢！',
-      reference: '新樂街口的三角窗 - oawan.me'
+      img: 'https://facebook.github.io/react/img/logo_og.png',
+      title: 'React',
+      content: 'React is a declarative, efficient, and flexible JavaScript library for building user interfaces. (p.s. React-oCard is under React v15.5.4)',
+      reference: 'photo by <a href="https://facebook.github.io/react/" target="_blank">Facebook React</a>'
     },{
       type: 'story',
-      img: 'https://oawan.me/img/food/2017/Tainan/North%20District/%E9%98%BF%E6%86%A8%E9%B9%B9%E7%B2%A5/%E8%99%B1%E7%9B%AE%E9%AD%9A%E8%82%9A%E7%B2%A5-1.jpg',
-      title: '阿憨鹹粥',
-      content: '來到虱目魚的故鄉，必定得先嚐嚐知名的鹹粥(虱目魚肚粥)！魚肚滑嫩化口，魚肉緊實鮮甜，雖然粥品、湯飯傻傻分不清楚，不過尬一支油條配著吃，這滋味真的揪懷念阿！',
-      reference: '新樂街口的三角窗 - oawan.me'
+      img: 'http://www.ruanyifeng.com/blogimg/asset/2016/bg2016012501.png',
+      title: 'Babel - ES6/ES2015',
+      content: 'ES2015 is a significant update to the language, and the first major update to the language since ES5 was standardized in 2009. Implementation of these features in major JavaScript engines is underway now. Babel is a JavaScript compiler to translate ES6+ to ES5.',
+      reference: 'photo by <a href="http://www.ruanyifeng.com/blog/2016/01/babel.html" target="_blank">阮一峰的網路日誌</a>'
     },{
       type: 'story',
-      img: 'https://oawan.me/2017/%E5%8F%B0%E5%8D%97%E4%B8%AD%E8%A5%BF%E5%8D%80-%E9%AC%8D%E9%AC%9A%E5%BF%A0%E7%89%9B%E8%82%89%E6%B9%AF-%E4%B8%8D%E5%8F%AF%E9%8C%AF%E9%81%8E%E7%9A%84%E9%A0%82%E7%B4%9A%E7%89%9B%E8%82%89%E6%B9%AF/img/%E9%AC%8D%E9%AC%9A%E5%BF%A0%E7%89%9B%E8%82%89%E6%B9%AF-1.jpg',
-      title: '鬍鬚忠牛肉湯',
-      content: '每次來台南，都一定要在行程中加上一碗牛肉湯！如果真的不想早起等排隊名店，我大大的推薦鬍鬚忠牛肉湯！湯頭清爽不油膩，而且味道還很濃郁不會過鹹，喝起來還有點洋蔥的鮮甜味，加上頂級牛肉的鮮嫩 Q 彈，真的是一試成主顧啊！',
-      reference: '新樂街口的三角窗 - oawan.me'
+      img: 'http://www.techprimelab.com/src/app/blogs/images/scss.png',
+      title: 'SCSS',
+      content: 'SCSS (Sassy CSS) falls under the Sass umbrella. It is a CSS syntax that’s been turbocharged with all the goodness of Sass. Valid CSS is also valid SCSS, so the transition is swift and painless, and you can learn as much as you want at any time to improve your skills.',
+      reference: 'photo by TechPrimeLab'
     },{
       type: 'story',
-      img: 'https://oawan.me/2017/%E5%8F%B0%E5%8D%97%E4%BB%81%E5%BE%B7%E5%8D%80-%E9%98%BF%E8%A3%95%E7%89%9B%E8%82%89%E6%B6%AE%E6%B6%AE%E9%8D%8B-%E8%B6%85%E8%B6%8A%E7%89%9B%E8%82%89%E6%B9%AF%E7%9A%84%E5%A4%A7%E4%BA%AB%E5%8F%97/img/%E9%98%BF%E8%A3%95%E7%89%9B%E8%82%89%E6%B6%AE%E6%B6%AE%E9%8D%8B-6.jpg',
-      title: '阿裕牛肉涮涮鍋',
-      content: '牛肉湯吃不夠爽嗎？你一定要來排一下阿裕牛肉涮涮鍋！必須說一下，雖然一盤牛肉價格不菲，但還是建議點上個三四盤，因為老闆會依盤數搭配不同部位的牛肉。牛大骨燉熬得清甜湯頭，加上不同部位的牛肉片，享受不同層次牛肉湯的體驗！',
-      reference: '新樂街口的三角窗 - oawan.me'
+      img: 'http://designrfix.com/wp-content/uploads/yapb_cache/css3.1pr8uv3k2qf4ww80408808sk4.26qeyncemmo0w4w4sgokogcgw.th.jpeg',
+      title: 'CSS3',
+      content: 'CSS3 is the latest standard for CSS. It\'s completely backwards-compatible with earlier versions of CSS.',
+      reference: 'photo by Designrfix'
     },{
-      type: 'embed',
-      embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/QCi1OpD-QeE?rel=0" frameborder="0" allowfullscreen></iframe>',
-      title: 'HowFun - 業配無極限',
-      content: '幹，陳孜昊你北七喔！',
-      reference: 'HowFun 陳孜昊'
+      type: 'story',
+      img: 'https://cldup.com/xFVFxOioAU.svg',
+      title: 'Mocha',
+      content: 'Mocha is a feature-rich JavaScript test framework running on Node.js and in the browser, making asynchronous testing simple and fun. Mocha tests run serially, allowing for flexible and accurate reporting, while mapping uncaught exceptions to the correct test cases.',
+      reference: 'photo by <a href="https://mochajs.org/" target="_blank">MochaJS</a>'
+    },{
+      type: 'author',
+      img: 'https://oawan.me/img/about/gears.jpg',
+      avatar: 'https://oawan.me/uploads/oA.jpg',
+      title: '<a href="https://oawan.me" target="_blank">I\'m OAwan</a>',
+      content: 'Coding, cats, photograph and live.<br/><br/>If you like this repo<br/>star or fork it!<br/>😍'
     }
+    
   ]
 };
 
 class Demo extends Component {
   render() {
-    return <Ocard {...story}/>
+    return (
+      <div style={{ display: 'flex' }}>
+        <div style={{ margin: '0 auto' }}>
+          <Ocard {...story}/>
+        </div>
+      </div>
+    );
   }
 }
 
