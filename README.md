@@ -4,6 +4,7 @@ The Card style information presentation on mobile devise :iphone:
 
 [![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
+[![Coveralls][coveralls-badge]][coveralls]
 [![LICENCE][licence-image]][licence-url]
 
 [build-badge]: https://travis-ci.org/GeorgioWan/react-ocard.svg?branch=master
@@ -11,6 +12,9 @@ The Card style information presentation on mobile devise :iphone:
 
 [npm-badge]: https://img.shields.io/npm/v/react-ocard.svg
 [npm]: https://www.npmjs.com/package/react-ocard
+
+[coveralls-badge]: https://img.shields.io/coveralls/georgiowan/react-ocard/master.png?style=flat-square
+[coveralls]: https://coveralls.io/github/georgiowan/react-ocard
 
 [licence-image]: https://img.shields.io/npm/l/react-ocard.svg
 [licence-url]: https://github.com/GeorgioWan/react-ocard/blob/master/LICENSE
