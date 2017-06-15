@@ -15,6 +15,10 @@ The Card style information presentation on mobile devise :iphone:
 [licence-image]: https://img.shields.io/npm/l/react-ocard.svg
 [licence-url]: https://github.com/GeorgioWan/react-ocard/blob/master/LICENSE
 
+## About React-oCard
+
+**React-oCard** was created with [**nwb**](https://github.com/insin/nwb), and it's inspired by Yahoo youcard, use ReactJS, [iScroll](https://github.com/cubiq/iscroll), ES6, SCSS and [Mocha](https://github.com/mochajs/mocha) etc.
+
 ## Installation
 
 - NPM
@@ -91,17 +95,18 @@ A story includes **cover (object)** and **cards (array)**, you can also follow t
 const story = {
     cover: {
         img,        // Cover image (should be an url)
-        title,      // Title of cover (should be string)
-        subTitle    // Subtitle of cover (should be string)
+        title,      // Title of cover (should be string or html)
+        subTitle    // Subtitle of cover (should be string or html)
     },
     cards: [
         {
-            type: 'story',  // Now only have two types to use 'story' and 'video'
+            type: 'story',  // Now only have two types to use 'story', 'author' and 'embed'
             img,            // when use 'story', you can set up the image (should be an url)
-            embed,          // when use 'video', you can set up the video (should be an iframe tag)
-            title,          // Title of this card (should be string)
-            content,        // Content of this card (should be string)
-            reference       // Reference of this car (should be string, and ref can be empty)
+            embed,          // when use 'embed', you can set up the embed (should be an iframe tag, ex. youtube video)
+            avatar,         // when use 'author', you can set up image and avatar (should be an url)
+            title,          // Title of this card (should be string or html)
+            content,        // Content of this card (should be string or html)
+            reference       // Reference of this car (should be string or html, and ref can be empty)
         }
     ]
 }
@@ -110,8 +115,6 @@ const story = {
 ## Development
 
 This Component is still under development, if you have any suggestion, please give an [**issue**](https://github.com/GeorgioWan/react-ocard/issues) or [**fork this repo**](https://github.com/GeorgioWan/react-ocard#fork-destination-box)
-
-> This project was created by [**nwb**](https://github.com/insin/nwb).
 
 ## License
 
