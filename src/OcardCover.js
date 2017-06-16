@@ -26,7 +26,6 @@ export default class OcardCover extends Component{
                 {
                     window.innerWidth < 970 ? '' :
                     <div id="oac-title" ref="oac-title">
-                        <h1>{ 5566 }</h1>
                         <div className="oac-title" 
                              dangerouslySetInnerHTML={{__html: title}}></div>
                         <div className="oac-title-subtitle" 

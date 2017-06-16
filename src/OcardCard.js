@@ -27,6 +27,7 @@ export default class OcardCard extends Component {
     }
     componentDidMount() {
         const el = this.refs[this.props.title];
+        
         this.setState({ top: el.getBoundingClientRect().top });
     }
     cardCoverGenerator(){
