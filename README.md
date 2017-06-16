@@ -13,8 +13,8 @@ The Card style information presentation on mobile devise :iphone:
 [npm-badge]: https://img.shields.io/npm/v/react-ocard.svg
 [npm]: https://www.npmjs.com/package/react-ocard
 
-[coveralls-badge]: https://img.shields.io/coveralls/georgiowan/react-ocard/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/georgiowan/react-ocard
+[coveralls-badge]: https://coveralls.io/repos/github/GeorgioWan/react-ocard/badge.svg?branch=master
+[coveralls]: https://coveralls.io/github/GeorgioWan/react-ocard?branch=master
 
 [licence-image]: https://img.shields.io/npm/l/react-ocard.svg
 [licence-url]: https://github.com/GeorgioWan/react-ocard/blob/master/LICENSE
